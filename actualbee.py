@@ -61,8 +61,12 @@ flower = int(input("How many flowers do you want to pollinate?:"))
 # Move and redraw after 0.1 seconds
 # Use flower as the number of times the bee is redrawn
 # Use flower as the distance
-for step in range(1,flower):
-    screen.ontimer(lambda: draw_bee(step*100, 0), 100)
+if flower == 0:
+    print ("No flowers pollinated :(")
+else:
+    for step in range(1,flower):
+        distance=(step*200)-280
+        screen.ontimer(draw_bee(distance, 0), 100)
 
 wn = trtl.Screen()
 wn.mainloop()
