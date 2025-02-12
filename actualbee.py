@@ -64,7 +64,7 @@ flower = int(input("How many flowers do you want to pollinate?:"))
 if flower == 0:
     print ("No flowers pollinated :(")
 else:
-    for step in range(1,flower):
+    for step in range(0,flower):
         distance=(step*200)-280
         screen.ontimer(draw_bee(distance, 0), 100)
 
